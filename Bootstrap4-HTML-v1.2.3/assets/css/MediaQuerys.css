@@ -1,0 +1,13 @@
+﻿@media (max-width: 415px) and (min-width: 320px){.FLN {margin-top: -20px}}
+
+
+.PaddingLeftRight {
+padding-left:2rem !important;
+padding-right:2rem !important;
+}
+
+.LoginPersonalizado {
+    padding-top: 0rem !important;
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+}

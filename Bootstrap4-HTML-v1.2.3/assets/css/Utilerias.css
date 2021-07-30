@@ -1,0 +1,62 @@
+﻿.MargenSuperior21 {
+    margin-top:-21px;
+}
+.TopSpace {
+top:-6px;
+}
+
+.Modal100px {
+height:100px;
+}
+
+.ModalPositionCenter {
+margin-top:250px !important;
+}
+
+
+.BackColorRed{
+background-color:#E6B0AA;
+}
+
+.BackColorYellow{
+background-color:#F9E79F;
+}
+.BackColorGreen{
+background-color:#A9DFBF;
+}
+
+.UpponTittle {
+    color: white;
+    position: absolute;
+    z-index: 1;
+    margin-top: 17px;
+    margin-left: 120px;
+}
+
+.MiddleScreen {
+    width:50%;
+}
+
+.FillAvalibleSpace {
+width : -webkit-fill-available;
+}
+
+.ImgFullSpace {
+width:100%;
+height:100%;
+}
+
+.ImgMiddleSpace {
+width:50%;
+}
+
+.ResponsiveTable{
+	overflow: auto;
+}
+
+#LogoFooter {
+	position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 35px;
+}

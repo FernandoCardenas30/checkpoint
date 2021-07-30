@@ -1,0 +1,16 @@
+<?php  
+
+function Conectar(){
+
+	$user="usrDbTest";
+	$password="pasDbTest";
+	$server="cloudsphere.com.mx";
+	$db="dbCloudSphere";
+	$con=mysqli_connect($server,$user,$password) 
+	or die("Error en la conección"."Error ".mysqli_error());
+	mysqli_select_db($con,$db);
+	return $con;
+
+}
+
+?>
