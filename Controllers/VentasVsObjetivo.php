@@ -87,7 +87,7 @@ while ($rows = mysqli_fetch_array($BSL)) {
 foreach ($objetivo_mes_array as &$objetivo) {
         $annotatios[] = array(
             "point" => $objetivo["id"],
-            "format" => "100%"
+            "format" => "100%" //Porcentaje de las barras azules
         );
 }
 
@@ -144,14 +144,14 @@ Highcharts.theme = {
     xAxis: {
         labels: {
             style: {
-                color: '#6e6e70'
+                color: '#000000'
             }
         }
     },
     yAxis: {
         labels: {
             style: {
-                color: '#6e6e70'
+                color: '#000000'
             }
         }
     },
@@ -270,7 +270,7 @@ Highcharts.chart('container2', {
   enabled: false
  },
  series: [{
-  name: 'objetivo del mes',
+  name: 'Objetivo del mes',
   data: $objetivo_mes_array
  }, {
    name: 'Facturado del mes',
@@ -300,7 +300,7 @@ Highcharts.chart('container2', {
           borderWidth: 0,
           type: 'measure',
           style: {
-              color: '#000080'
+              color: '#000000'
           }
       }
   }]

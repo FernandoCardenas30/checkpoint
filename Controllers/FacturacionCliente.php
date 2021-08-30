@@ -19,33 +19,35 @@ $TotalFacturacionCliente = "SELECT  CONCAT('$', format(SUM(Mes),2))AS TotalFactu
 while($rows=mysqli_fetch_array($FC))
         {
             
-            $studid = $rows['Codigo'];
-            $name = $rows['Cliente'];
+            //$studid = $rows['Codigo'];
+            $name1 = $rows['Codigo'];
+            $name2 = $rows['Cliente'];
             $address = $rows['Mes'];
             $class = $rows['Dia'];
 
     echo "<tr>";
-    echo "<td align=center>$studid</td>";
-    echo "<td align=left>$name</td>";
+    //echo "<td align=center>$studid</td>";
+    echo "<td align=left>$name1</td>";
+    echo "<td align=left>$name2</td>";
     echo "<td align=right>$address</td>";
     echo "<td align=right>$class</td>";
     echo "</tr>"; }
 
-while($rows=mysqli_fetch_array($TFC))
-        {
+    while($rows=mysqli_fetch_array($TFC))
+    {
             
-            $TotalFacturadoMensual = $rows['TotalFacturadoMensual'];
-            $TotalFacturadoDia = $rows['TotalFacturadoDia'];
+        $TotalFacturadoMensual = $rows['TotalFacturadoMensual'];
+        $TotalFacturadoDia = $rows['TotalFacturadoDia'];
           
 
-    echo "<tr style='font-weight:bold'>";
-    echo "<td align=center>TOTALES</td>";
-    echo "<td align=center></td>";
-    echo "<td align=center>$TotalFacturadoMensual</td>";
-    echo "<td align=left>$TotalFacturadoDia</td>";
-    echo "</tr>";
+        echo "<tr style='font-weight:bold'>";
+        echo "<td align=center>TOTALES</td>";
+        echo "<td align=center></td>";
+        echo "<td align=center>$TotalFacturadoMensual</td>";
+        echo "<td align=left>$TotalFacturadoDia</td>";
+        echo "</tr>";
 
-        }
+    }
 echo "</tbody></table></div>";
         
 

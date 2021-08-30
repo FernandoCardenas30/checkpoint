@@ -185,7 +185,7 @@ var chart = Highcharts.chart('container', {
     format: '<b>{point.percentage:.1f} %</b>',
     distance: 10,
     style: {
-        color: '#000080'
+        color: '#00000'
     }
    },
    borderWidth: 0,
@@ -193,10 +193,10 @@ var chart = Highcharts.chart('container', {
    showInLegend: true
   },
   series: {
-            animation: {
-                duration: 2000
-            }
-      }
+        animation: {
+            duration: 2000
+        }
+    }
 
  },
  series: [{

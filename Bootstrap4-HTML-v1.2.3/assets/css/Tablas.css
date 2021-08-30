@@ -1,6 +1,6 @@
 ﻿    table.tableizer-table {
             font-size: 12px !important;
-            border: 1px solid #CCC !important;
+            border: 1px solid #2059a5 !important;
             font-family: Arial, Helvetica, sans-serif !important;
         }
 
@@ -16,10 +16,10 @@
         }
 
         .tableizer-table th {
-            background-color:#383c48 !important;
+            background-color:#2059a5 !important;
             color: #f5f5f5 !important;
             /*font-weight: 900 !important;*/
-            font-size: 10px !important;
+            font-size: 12px !important;
             text-align: center !important;
             text-transform:uppercase !important;
         }

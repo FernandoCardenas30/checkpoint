@@ -8,13 +8,13 @@ $conexionBusinnes= Conectar();
 
     $Fecha = mysqli_fetch_array(ConsultaUltimaFecha());
     
-$TotalesVentasMensuales = "SELECT SUM(Enero+Febrero+Marzo+Abril+Mayo+Junio+Julio+Agosto+Septiembre+Octubre+Noviembre+Diciembre)AS TotalVentasMensuales from tbl_ventasmensuales where Fecha = '$Fecha[0]'";
+$TotalesVentasMensuales = "SELECT SUM(Enero+Febrero+Marzo+Abril+Mayo+Junio+Julio+Agosto+Septiembre+Octubre+Noviembre+Diciembre) AS TotalVentasMensuales from tbl_ventasmensuales where Fecha = '$Fecha[0]'";
 
 $TVM=mysqli_query($conexionBusinnes,$TotalesVentasMensuales) or die(mysqli_error($conexionBusinnes));
-
-         $TOP15 = "call sp_consultatop15('$Fecha[0]')";
-
-        $T15=mysqli_query($conexionBusinnes,$TOP15) or die(mysqli_error($conexionBusinnes));
+        
+    //  $TOP15 = "call sp_consultatop15('$Fecha[0]')";
+    $TOP15 = "call sp_consultatop15()";
+    $T15=mysqli_query($conexionBusinnes,$TOP15) or die(mysqli_error($conexionBusinnes));
 
 
 $rows=mysqli_fetch_array($TVM);
@@ -119,7 +119,7 @@ Highcharts.theme = {
             'stroke-width': 1,
             states: {
                 select: {
-                    fill: '#D0D0D8'
+                    fill: '#ffffff'
                 }
             }
         }
@@ -224,7 +224,7 @@ echo "],
             verticalAlign: 'left',
             borderWidth: 0,
             style: {
-                color: '#000080'
+                color: '#000000'
             }
         }
     }],

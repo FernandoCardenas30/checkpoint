@@ -6,7 +6,7 @@ ini_set('display_errors', '1');
 include("Coneccion.php");
 $conexionBusinnes= Conectar();
 
-    $Fecha = mysqli_fetch_array(ConsultaUltimaFecha());
+$Fecha = mysqli_fetch_array(ConsultaUltimaFecha());
 
 $TVM = "";
 $Cadena = "";
@@ -74,7 +74,7 @@ Highcharts.theme = {
     xAxis: {
         labels: {
             style: {
-                color: '#6e6e70'
+                color: '#000000'
             }
         },";
 
@@ -93,7 +93,7 @@ $Totales = $rows['TotalVentasMensuales'];
          while($rows = mysqli_fetch_array($CT))
          {
             $Nombre = $rows['Nombre'];
-      echo "'$Nombre',";
+            echo "'$Nombre',";
 
         }
 
@@ -108,7 +108,7 @@ $Totales = $rows['TotalVentasMensuales'];
         },
            labels: {
             style: {
-                color: '#6e6e70'
+                color: '#000000'
             }
         },  stackLabels: {
             style: {
@@ -517,12 +517,13 @@ $PC = mysqli_query($conexionBusinnes,$Porcentajes) or die(mysqli_error($conexion
          {
 
         $Name = $rows['Nombre'];
-       $TotalPorcento = $rows['TotalPorcentaje'];
-       $Porcentaje = number_format($TotalPorcento*100/$Totales, 2, '.', '');
-
+            
+    //    $TotalPorcento = $rows['TotalPorcentaje'];
+    //    $Porcentaje = number_format($TotalPorcento*100/$Totales, 2, '.', '');
+    //    text: '$Porcentaje %'
          echo "{
-            point: '$Name',
-            text: '$Porcentaje %'
+            point: '$Name'
+            
         },";
      }
        
@@ -532,7 +533,7 @@ $PC = mysqli_query($conexionBusinnes,$Porcentajes) or die(mysqli_error($conexion
           distance:1,
             borderWidth: 0,
             style: {
-                color: '#000080'
+                color: '#000000'
             }
         }
     }],

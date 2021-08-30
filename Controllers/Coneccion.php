@@ -1,14 +1,20 @@
 <?php  
 
 function Conectar(){
-	// $user="developer";
-	// $password="ITsistemas0313";
-	// $server="localhost:3306";
-	// $db="dbCloudSphere";
-$user="usrDbTest";
-	$password="pasDbTest";
-	$server="cloudsphere.com.mx";
-	$db="dbCloudSphere";
+    // $user="developer";
+    // $password="ITsistemas0313";
+    // $server="localhost:3306";
+    // $db="dbCloudSphere";
+    /*------------------------------------------------------------*/
+    // $user="usrDbTest";
+    // $password="pasDbTest";
+    // $server="cloudsphere.com.mx";
+    // $db="dbCloudSphere";
+
+    $user="root";
+    $password="ITsistemas0313";
+    $server="localhost:3306";
+    $db="dbDesign";
 	$con = mysqli_connect($server, $user, $password, $db);
 
 if (!$con) {
@@ -28,7 +34,7 @@ return $con;
 
 
 function ConsultaUltimaFecha() {
-  $Query = "SELECT MAX(Fecha) as Fecha from dbCloudSphere.tbl_lineanegocio";
+  $Query = "SELECT MAX(Fecha) as Fecha from dbdesign.tbl_lineanegocio";
    $Result=mysqli_query(Conectar(),$Query) or die(mysqli_error($conexionBusinnes));
    return $Result;
 }
